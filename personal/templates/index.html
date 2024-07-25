@@ -1,0 +1,122 @@
+<!-- portfolio/templates/portfolio/home.html -->
+<!DOCTYPE html>
+{% load static  %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Home Page{% endblock %}</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <style>
+        /* Custom styles can be added here */
+        body {
+            padding-top: 4.5rem; /* Adjust based on your navbar height */
+        }
+        .footer {
+            background-color: #333232;
+            color: #fff;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+
+{% include 'navbar.html' %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1>Welcome to My Portfolio</h1>
+                <p class="lead">Here My skills, projects, and experience.</p>
+                <a href="{% url 'portfolio' %}" class="btn btn-primary">View Portfolio</a>
+            </div>
+            <div class="col-lg-6">
+                <!-- Add an image or other content here -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>About Me</h2>
+                <p>I am a passionate Python developer with a strong foundation in web development and data manipulation. My expertise lies in leveraging Python and its ecosystem to build robust applications and extract meaningful insights from data. Here’s a snapshot of my skills:
+
+                    Python Development: Proficient in Python programming with a focus on backend development, scripting, and automation.
+                    
+                    Web Development: Experienced in building web applications using Django and Flask frameworks. Skilled in creating RESTful APIs to deliver seamless user experiences.
+                    
+                    Database Management: Proficient in MySQL for structured data storage and retrieval, ensuring efficient data handling in applications.
+                    
+                    Web Scraping: Experienced in extracting data from websites using Python libraries like BeautifulSoup and Scrapy, ensuring accurate and efficient data collection.
+                    
+                    Data Analysis: Skilled in data manipulation and analysis using libraries such as Pandas and NumPy, extracting insights and visualizing data to support informed decision-making.
+                    
+                    Automation: Proficient in using Selenium for web automation tasks, streamlining processes and improving efficiency.
+                    
+                    Frontend Development: Familiar with HTML, CSS, and JavaScript, capable of integrating frontend components with backend functionalities for cohesive web applications.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+ <!-- Portfolio Section -->
+<section id="portfolio" class="portfolio-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Portfolio</h2>
+                <div class="row">
+                    <!-- Add your portfolio items here -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Project Title</h5>
+                                <p class="card-text">Project description goes here.</p>
+                                <a href="{% url 'portfolio' %}" class="btn btn-primary">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Contact Me</h2>
+                <p>Email Adress- razashah@35gmail.com</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% include 'footer.html' %}
+
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
