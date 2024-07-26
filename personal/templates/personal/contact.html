@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+{% block title %}Contact Page{% endblock %}
+
+
+
+{% block content %}
+
+<h1>Contact</h1>
+{% load cust_filter %}
+<ul>
+    
+    {% for key, value in my_dict.items %}
+        <li>{{key|f2upper}}:-  {{ value|lower}} </li>
+    {% empty %}
+        <li>No contact information available.</li>
+    {% endfor %}
+  
+</ul>
+
+
+{% endblock %}
